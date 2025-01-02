@@ -1,5 +1,4 @@
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 size_t ft_strlcpy(char *dest, const char *src, size_t n)
 {
@@ -22,13 +21,13 @@ size_t ft_strlcpy(char *dest, const char *src, size_t n)
     return (i);
 }
 
-int main()
-{
-    char dest[10];
-    const char *src = "Hello, World!";
+// int main()
+// {
+//     char dest[10];
+//     const char *src = "Hello, World!";
     
-    size_t len = ft_strlcpy(dest, src, sizeof(dest));
-    printf("Destino: %s\n", dest);
-    printf("Longitud fuente: %zu\n", len);
-    return 0;
-}
+//     int len = ft_strlcpy(dest, src, sizeof(dest));
+//     printf("Destino: %s\n", dest);
+//     printf("Longitud fuente: %i\n", len);
+//     return 0;
+// }
