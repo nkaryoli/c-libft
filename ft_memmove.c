@@ -24,14 +24,14 @@ void *ft_memmove(void *dest, const void *src, size_t n)
     return (dest);
 }
 
-int main(void)
-{
-    char arr[] = "Hello, World";
-    char arr1[] = "Hello, World";
+// int main(void)
+// {
+//     char arr[] = "Hello, World";
+//     char arr1[] = "Hello, World";
 
-    ft_memmove(arr + 6, arr, 5);
-    printf("ft_memmove: %s\n", arr);
-    ft_memmove(arr1 + 6 , arr1, 5);
-    printf("memmove: %s\n", arr1);
-    return (0);
-}
+//     ft_memmove(arr + 6, arr, 5);
+//     printf("ft_memmove: %s\n", arr);
+//     ft_memmove(arr1 + 6 , arr1, 5);
+//     printf("memmove: %s\n", arr1);
+//     return (0);
+// }

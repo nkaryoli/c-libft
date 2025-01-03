@@ -17,17 +17,17 @@ void ft_bzero(void *s, size_t n)
     }
 }
 
-int main(void)
-{
-    char ptr[] = "Hello World";
-    int i;
+// int main(void)
+// {
+//     char ptr[] = "Hello World";
+//     int i;
 
-    ft_bzero(ptr, 4);
-    i = 4;
-    while (ptr[i] != '\0')
-    {
-        printf("%c", ptr[i]);
-        i++;
-    }
-    return (0);
-}
+//     ft_bzero(ptr, 4);
+//     i = 4;
+//     while (ptr[i] != '\0')
+//     {
+//         printf("%c", ptr[i]);
+//         i++;
+//     }
+//     return (0);
+// }

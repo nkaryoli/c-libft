@@ -18,12 +18,12 @@ void *ft_memcpy(void *dest, const void *src, size_t n)
     return (dest);
 }
 
-int main(void)
-{
-    char src[] = "Hello World";
-    char dest[50];
+// int main(void)
+// {
+//     char src[] = "Hello World";
+//     char dest[50];
 
-    ft_memcpy(dest, src, 7);
-    printf("Destino: %s\n", dest);
-    return (0);
-}
+//     ft_memcpy(dest, src, 7);
+//     printf("Destino: %s\n", dest);
+//     return (0);
+// }
