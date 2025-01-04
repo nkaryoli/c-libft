@@ -14,14 +14,14 @@ char *ft_strjoin(char const *s1, char const *s2)
     return (strjoin);
 }
 
-int main(void)
-{
-    char s1[] = "Hello, ";
-    char s2[] = "world";
-    char *result;
+// int main(void)
+// {
+//     char s1[] = "Hello, ";
+//     char s2[] = "world";
+//     char *result;
 
-    result = ft_strjoin(s1, s2);
-    printf("%s\n", result);
-    free(result);
-    return (0);
-}
+//     result = ft_strjoin(s1, s2);
+//     printf("%s\n", result);
+//     free(result);
+//     return (0);
+// }
