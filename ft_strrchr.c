@@ -1,31 +1,27 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: knieves- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/06 12:31:47 by knieves-          #+#    #+#             */
+/*   Updated: 2025/01/06 12:33:13 by knieves-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
-//#include <string.h>
 
-char *ft_strrchr(const char *str, int c)
+char	*ft_strrchr(const char *str, int c)
 {
-    int len;
+	int	len;
 
-    len = ft_strlen(str);
-    while (len >= 0)
-    {
-        if (str[len] == (char)c)
-            return ((char *)(str + len));
-        len--;
-    }
-    return (0);
+	len = ft_strlen(str);
+	while (len >= 0)
+	{
+		if (str[len] == (char)c)
+			return ((char *)(str + len));
+		len--;
+	}
+	return (0);
 }
-
-// int main(void)
-// {
-//     const char *cadena = "Hola hola, mundo!";
-//     char caracter = 'l';
-
-//     char *resultado = strrchr(cadena, caracter);
-
-//     if (resultado != NULL) {
-//         printf("El carácter '%c' se encontró en la posición: %i\n", caracter, resultado - cadena);
-//     } else {
-//         printf("El carácter '%c' no se encontró en la cadena.\n", caracter);
-//     }
-//     return (0);
-// }

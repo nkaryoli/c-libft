@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_putendl_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: knieves- <knieves-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/07 18:58:39 by knieves-          #+#    #+#             */
-/*   Updated: 2025/01/07 18:58:55 by knieves-         ###   ########.fr       */
+/*   Created: 2025/01/07 16:54:48 by knieves-          #+#    #+#             */
+/*   Updated: 2025/01/07 17:08:45 by knieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	ft_putendl_fd(char *s, int fd)
 {
-	long long	result;
-	int			sign;
-	int			i;
+	char	nl;
 
-	result = 0;
-	sign = 1;
-	i = 0;
-	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	nl = '\n';
+	if (*s && fd > -1)
 	{
-		if (str[i] == '-')
-			sign *= -1;
-		i++;
+		write(fd, s, ft_strlen(s));
+		write(fd, &nl, 1);
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + (str[i] - '0');
-		i++;
-	}
-	return (sign * result);
+	return ;
 }

@@ -1,28 +1,26 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: knieves- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2025/01/06 12:28:55 by knieves-          #+#    #+#             */
+/*   Updated: 2025/01/06 12:31:10 by knieves-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "libft.h"
 
-char *ft_strchr(const char *str, int c)
+char	*ft_strchr(const char *str, int c)
 {
-    while (*str != '\0')
-    {
-        if (*str == (char)c)
-            return ((char *)str);
-        str++;
-    }
-    if (c == '\0')
-        return ((char *)str);
-    return (0);
+	while (*str != '\0')
+	{
+		if (*str == (char)c)
+			return ((char *)str);
+		str++;
+	}
+	if (c == '\0')
+		return ((char *)str);
+	return (0);
 }
-
-// int main(void)
-// {
-//     const char *cadena = "Hola, mundo!";
-//     char caracter = 'm';
-
-//     char *resultado = ft_strchr(cadena, caracter);
-//     if (resultado != NULL) {
-//         printf("El caracter '%c' se encontro en la posicion: %i\n", caracter, resultado - cadena);
-//     } else {
-//         printf("El caracter '%c' no se encontro en la cadena.\n", caracter);
-//     }
-//     return (0);
-// }

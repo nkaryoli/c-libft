@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: knieves- <knieves-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/07 18:58:39 by knieves-          #+#    #+#             */
-/*   Updated: 2025/01/07 18:58:55 by knieves-         ###   ########.fr       */
+/*   Created: 2025/01/07 15:24:52 by knieves-          #+#    #+#             */
+/*   Updated: 2025/01/07 18:17:05 by knieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	long long	result;
-	int			sign;
-	int			i;
+	unsigned int	i;
 
-	result = 0;
-	sign = 1;
 	i = 0;
-	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
+	while (s[i] != '\0' && s)
 	{
-		if (str[i] == '-')
-			sign *= -1;
+		f(i, s);
+		s++;
 		i++;
 	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + (str[i] - '0');
-		i++;
-	}
-	return (sign * result);
 }

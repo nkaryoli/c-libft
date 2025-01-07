@@ -1,38 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: knieves- <knieves-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/07 18:58:39 by knieves-          #+#    #+#             */
-/*   Updated: 2025/01/07 18:58:55 by knieves-         ###   ########.fr       */
+/*   Created: 2025/01/07 18:37:17 by knieves-          #+#    #+#             */
+/*   Updated: 2025/01/07 20:15:05 by knieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_atoi(const char *str)
+int	main(void)
 {
-	long long	result;
-	int			sign;
-	int			i;
+	int		c1;
+	int		c2;
+	int		fd;
+	char	nl;
+	char	c;
 
-	result = 0;
-	sign = 1;
-	i = 0;
-	while (str[i] == ' ' || (str[i] >= '\t' && str[i] <= '\r'))
-		i++;
-	if (str[i] == '-' || str[i] == '+')
-	{
-		if (str[i] == '-')
-			sign *= -1;
-		i++;
-	}
-	while (str[i] >= '0' && str[i] <= '9')
-	{
-		result = result * 10 + (str[i] - '0');
-		i++;
-	}
-	return (sign * result);
+	c1 = 98;
+	c2 = 66;
+	fd = 1;
+	nl = '\n';
+	c1 = ft_toupper(c1);
+	c = c1;
+	ft_putchar_fd(c, fd);
+	ft_putchar_fd(nl, fd);
+	c2 = ft_tolower(c2);
+	c = c2;
+	write(1, &c, 1);
+	ft_putchar_fd(c,fd);
+	return (0);
 }
