@@ -16,8 +16,8 @@ static	void	free_memory(char **res, int n)
 {
 	while (n > 0)
 	{
-		i--;
-		free(res[i]);
+		n--;
+		free(res[n]);
 	}
 	free(res);
 }
@@ -45,18 +45,20 @@ static char	*substring(const char *s, char c, size_t n)
 {
 	char	*res;
 	char	start;
+	size_t	word;
 	size_t	i;
 
 	i = 0;
+	word = 0;
 	while (s[i])
 	{
 		while (s[i] == c)
 			i++;
 		start = i;
-		count++;
+		word++;
 		while (s[i] != c)
 			i++;
-		if (count == n && i > start)
+		if (word == n && i > start)
 		{
 			res = (char *)malloc((i - start + 1) * sizeof(char));
 			if (!res)
