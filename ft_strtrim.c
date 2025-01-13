@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: knieves- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: knieves- <knieves-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 13:24:07 by knieves-          #+#    #+#             */
 /*   Updated: 2025/01/06 13:26:04 by knieves-         ###   ########.fr       */

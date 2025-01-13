@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: knieves- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: knieves- <knieves-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 15:19:25 by knieves-          #+#    #+#             */
 /*   Updated: 2025/01/06 12:03:41 by knieves-         ###   ########.fr       */

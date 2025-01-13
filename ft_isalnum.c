@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalnum.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: knieves- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: knieves- <knieves-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 15:49:34 by knieves-          #+#    #+#             */
 /*   Updated: 2025/01/07 18:21:10 by knieves-         ###   ########.fr       */

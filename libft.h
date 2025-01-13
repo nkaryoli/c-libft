@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: knieves- <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: knieves- <knieves-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 12:48:05 by knieves-          #+#    #+#             */
 /*   Updated: 2025/01/07 17:36:17 by knieves-         ###   ########.fr       */
