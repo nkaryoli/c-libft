@@ -12,7 +12,17 @@
 
 #include "libft.h"
 
-size_t	count_substr(const char *s, char c)
+static	void	free_memory(char **res, int n)
+{
+	while (n > 0)
+	{
+		i--;
+		free(res[i]);
+	}
+	free(res);
+}
+
+static size_t	count_substr(const char *s, char c)
 {
 	size_t	count;
 
@@ -21,7 +31,7 @@ size_t	count_substr(const char *s, char c)
 	{
 		while (*s == c)
 			s++;
-		if (*s)
+		if (*s != c)
 		{
 			count++;
 			while (*s && *s != c)
@@ -31,48 +41,56 @@ size_t	count_substr(const char *s, char c)
 	return (count);
 }
 
-char	*save(char **result, const char *start, const char *end, size_t *i)
+static char	*substring(const char *s, char c, size_t n)
 {
-	size_t	j;
+	char	*res;
+	char	start;
+	size_t	i;
 
-	j = 0;
-	if (end > start)
+	i = 0;
+	while (s[i])
 	{
-		result[*i] = (char *)malloc((end - start + 1) * sizeof(char));
-		if (!result[*i])
-			return (NULL);
-		while (start < end)
-			result[*i][j++] = *start++;
-		result[*i][j] = '\0';
-		(*i)++;
+		while (s[i] == c)
+			i++;
+		start = i;
+		count++;
+		while (s[i] != c)
+			i++;
+		if (count == n && i > start)
+		{
+			res = (char *)malloc((i - start + 1) * sizeof(char));
+			if (!res)
+				return (NULL);
+			ft_strlcpy(res, s + start, i - start + 1);
+		}
 	}
-	return (result[*i]);
+	return (res);
 }
 
-char	**ft_split(const char *s, char c)
+char	**split(const char *s, char c)
 {
-	char			**result;
-	const char		*start;
-	size_t			count;
-	size_t			i;
+	const		**result;
+	size_t		count;
+	size_t		i;
 
 	i = 0;
 	if (!s)
 		return (NULL);
 	count = count_substr(s, c);
-	printf("cantidad de substr encontradas %zu\n", count);
-	result = (char **)malloc((count + 1) * sizeof(char *));
+	result = (char **)malloc((count +1) * sizeof(char *));
 	if (!result)
 		return (NULL);
-	while (*s)
+	while (i < count)
 	{
-		while (*s == c)
-			s++;
-		start = s;
-		while (*s && *s != c)
-			s++;
-		save(result, start, s, &i);
+		if (i == count - 1)
+			result[i] = '\0';
+		else
+		{
+			result[i] = substring(s, c, i);
+			if (!result)
+				free_memmory(result, i);
+		}
+		i++;
 	}
-	result[count] = NULL;
 	return (result);
 }
