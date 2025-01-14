@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static	void	free_memory(char **res, int n)
+static	void	free_memmory(char **res, int n)
 {
 	while (n > 0)
 	{
@@ -44,7 +44,7 @@ static size_t	count_substr(const char *s, char c)
 static char	*substring(const char *s, char c, size_t n)
 {
 	char	*res;
-	char	start;
+	size_t	start;
 	size_t	word;
 	size_t	i;
 
@@ -56,7 +56,7 @@ static char	*substring(const char *s, char c, size_t n)
 			i++;
 		start = i;
 		word++;
-		while (s[i] != c)
+		while (s[i] && s[i] != c)
 			i++;
 		if (word == n && i > start)
 		{
@@ -71,7 +71,7 @@ static char	*substring(const char *s, char c, size_t n)
 
 char	**split(const char *s, char c)
 {
-	const		**result;
+	char	**result;
 	size_t		count;
 	size_t		i;
 
@@ -79,20 +79,19 @@ char	**split(const char *s, char c)
 	if (!s)
 		return (NULL);
 	count = count_substr(s, c);
-	result = (char **)malloc((count +1) * sizeof(char *));
+	result = (char **)malloc((count + 1) * sizeof(char *));
 	if (!result)
 		return (NULL);
 	while (i < count)
 	{
-		if (i == count - 1)
-			result[i] = '\0';
-		else
+		result[i] = substring(s, c, i + 1);
+		if (!result)
 		{
-			result[i] = substring(s, c, i);
-			if (!result)
-				free_memmory(result, i);
+			free_memmory(result, i);
+			return (NULL);
 		}
 		i++;
 	}
+	result[i] = NULL;
 	return (result);
 }

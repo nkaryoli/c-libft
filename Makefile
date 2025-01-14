@@ -20,11 +20,12 @@ SRCS = ft_atoi.c ft_bzero.c ft_memcpy.c ft_memmove.c ft_memchr.c \
        ft_strtrim.c ft_split.c ft_strmapi.c ft_toupper.c ft_tolower.c \
        ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
        ft_strncmp.c ft_memcmp.c ft_strjoin.c ft_itoa.c
-BONUS_FILES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
-		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+BONUS_SRCS = ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
+		ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c \
+		ft_lstnew.c
 
 OBJS = $(SRCS:.c=.o)
-BONUS_OBJS = $(BONUS_FILES:.c=.o)
+BONUS_OBJS = $(BONUS_SRCS:.c=.o)
 
 all: $(NAME)
 
@@ -32,16 +33,16 @@ $(NAME): $(OBJS)
 	@ar rcs $@ $^
 	@echo "Library compiled successfully."
 
+bonus: $(BONUS_OBJS)
+	@ar rcs $(NAME) $^
+	@echo "Bonus functions added to libft.a"
+
 clean:
-	@rm -f $(OBJS)
+	@rm -f $(OBJS) $(BONUS_OBJS)
 	@echo "Object files removed."
 
 fclean: clean
 	@rm -f $(NAME)
 	@echo "Libft and object files removed."
-
-bonus: 
-	@$(CC) $(CFLAGS) -C $(BONUS_FILES)
-	@ar rcs $(Name) $(BONUS_OBJS)
 
 re: fclean all
