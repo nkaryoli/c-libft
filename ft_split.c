@@ -6,7 +6,7 @@
 /*   By: knieves- <knieves-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 20:17:25 by knieves-          #+#    #+#             */
-/*   Updated: 2025/01/07 16:40:36 by knieves-         ###   ########.fr       */
+/*   Updated: 2025/01/16 15:55:57 by knieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,7 +31,7 @@ static size_t	count_substr(const char *s, char c)
 	{
 		while (*s == c)
 			s++;
-		if (*s != c)
+		if (*s)
 		{
 			count++;
 			while (*s && *s != c)
@@ -48,6 +48,7 @@ static char	*substring(const char *s, char c, size_t n)
 	size_t	word;
 	size_t	i;
 
+	res = NULL;
 	i = 0;
 	word = 0;
 	while (s[i])
@@ -69,11 +70,11 @@ static char	*substring(const char *s, char c, size_t n)
 	return (res);
 }
 
-char	**split(const char *s, char c)
+char	**ft_split(const char *s, char c)
 {
 	char	**result;
-	size_t		count;
-	size_t		i;
+	size_t	count;
+	size_t	i;
 
 	i = 0;
 	if (!s)
@@ -85,7 +86,7 @@ char	**split(const char *s, char c)
 	while (i < count)
 	{
 		result[i] = substring(s, c, i + 1);
-		if (!result)
+		if (!result[i])
 		{
 			free_memmory(result, i);
 			return (NULL);

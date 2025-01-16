@@ -6,7 +6,7 @@
 /*   By: knieves- <knieves-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/06 12:15:49 by knieves-          #+#    #+#             */
-/*   Updated: 2025/01/06 12:18:24 by knieves-         ###   ########.fr       */
+/*   Updated: 2025/01/11 16:10:04 by knieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	unsigned char	*c_dest;
 	unsigned char	*c_src;
 
+	if (!src && !dest)
+		return (NULL);
 	i = 0;
 	c_dest = (unsigned char *)dest;
 	c_src = (unsigned char *)src;
@@ -26,6 +28,5 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 		c_dest[i] = c_src[i];
 		i++;
 	}
-	c_dest[n] = '\0';
 	return (dest);
 }
