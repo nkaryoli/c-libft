@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: knieves- <knieves-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/01/06 12:10:43 by knieves-          #+#    #+#             */
-/*   Updated: 2025/01/06 12:14:34 by knieves-         ###   ########.fr       */
+/*   Created: 2025/01/11 14:35:01 by knieves-          #+#    #+#             */
+/*   Updated: 2025/01/11 15:44:59 by knieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ void	ft_bzero(void *s, size_t n)
 
 	copy = (unsigned char *)s;
 	i = 0;
-	if (s == NULL)
-		return ;
 	while (i < n)
 	{
 		copy[i] = 0;

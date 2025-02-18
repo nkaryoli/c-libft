@@ -6,7 +6,7 @@
 /*   By: knieves- <knieves-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/07 15:24:52 by knieves-          #+#    #+#             */
-/*   Updated: 2025/01/07 18:17:05 by knieves-         ###   ########.fr       */
+/*   Updated: 2025/01/11 19:44:07 by knieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 	i = 0;
 	while (s[i] != '\0' && s)
 	{
-		f(i, s);
-		s++;
+		f(i, &s[i]);
 		i++;
 	}
 }

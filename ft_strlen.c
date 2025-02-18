@@ -6,13 +6,15 @@
 /*   By: knieves- <knieves-@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/30 16:41:03 by knieves-          #+#    #+#             */
-/*   Updated: 2025/01/06 12:09:15 by knieves-         ###   ########.fr       */
+/*   Updated: 2025/01/16 18:04:22 by knieves-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (str[i] != '\0')
