@@ -59,13 +59,13 @@ The goal of this project is to create a static library (`libft.a`) containing a 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/libft.git
+   git clone https://github.com/nkaryoli/libft.git
 
 2. Navigate to the project directory:
    ```bash
    cd libft
 
-3. Compile the library::
+3. Compile the library:
    ```bash
    make
    
