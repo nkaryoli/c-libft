@@ -10,9 +10,7 @@
 3. [Functions Implemented](#functions-implemented)
 4. [Installation](#installation)
 5. [Usage](#usage)
-6. [Testing](#testing)
-7. [Contributing](#contributing)
-8. [License](#license)
+6. [License](#license)
 
 ---
 
