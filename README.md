@@ -1,7 +1,5 @@
 # Libft - 42 Barcelona
 
-![42 Barcelona Logo](https://via.placeholder.com/150)
-
 **Libft** is the first project in my 42 curriculum, where I createD my own C library. It serves as the foundation for future projects, providing essential functions that will be reuse throughout my journey at 42.
 
 ---
